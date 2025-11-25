@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Guestbook</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to the Guestbook!</h1>
+    <form id="guestForm" method="POST" action="/">
+        <input type="text" id="nameInput" name="name" placeholder="Your name" required>
+        <button type="submit" id="submitBtn">Submit</button>
+    </form>
+    <h2>Guest List</h2>
+    <ul id="guestList">
+        {% for entry in guest_entries %}
+            <li>{{ entry }}</li>
+        {% else %}
+            <li>No entries yet.</li>
+        {% endfor %}
+    </ul>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

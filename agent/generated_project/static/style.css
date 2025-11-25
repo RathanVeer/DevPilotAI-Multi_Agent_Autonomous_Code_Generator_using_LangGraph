@@ -1,0 +1,121 @@
+/* Guestbook Styles */
+
+/* Layout */
+.container {
+    max-width: 800px;
+    margin: 0 auto; /* Center horizontally */
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 2rem 0;
+}
+
+h1, h2 {
+    color: #333333;
+    margin-top: 0;
+}
+
+/* Form Styling */
+#guestForm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#nameInput {
+    flex: 1 1 auto;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+#nameInput:focus {
+    outline: none;
+    border-color: #66afe9;
+    box-shadow: 0 0 4px rgba(102, 175, 233, 0.6);
+}
+
+#submitBtn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #4a90e2;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+    user-select: none;
+}
+
+#submitBtn:hover {
+    background-color: #357ab8;
+}
+
+#submitBtn:active {
+    transform: scale(0.98);
+}
+
+#submitBtn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.4);
+}
+
+/* Guest List */
+#guestList {
+    list-style-type: none; /* Remove default disc */
+    padding: 0;
+    margin: 0;
+}
+
+#guestList li {
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    background-color: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#guestList li:hover {
+    background-color: #f0f8ff;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+
+    #guestForm {
+        flex-direction: column;
+    }
+
+    #nameInput,
+    #submitBtn {
+        width: 100%;
+        margin: 0;
+    }
+
+    #submitBtn {
+        margin-top: 0.5rem;
+    }
+}

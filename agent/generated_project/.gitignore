@@ -1,0 +1,27 @@
+# Node modules for backend and frontend
+node_modules/
+frontend/node_modules/
+
+# Build output folder for frontend
+frontend/build/
+
+# Environment files
+.env
+.env.*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Python virtual environment
+venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Flask instance folder
+instance/
+
+# SQLite database files
+*.sqlite3
